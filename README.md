@@ -1,18 +1,17 @@
 # TaskFlow 🚀
 
-TaskFlow is a premium, minimalist team task management application designed for modern high-performance teams. It features a sleek black-and-white aesthetic, real-time Kanban boards, and robust project tracking capabilities.
+TaskFlow is a professional team task management application designed for modern high-performance teams. It features a sleek black-and-white aesthetic, real-time Kanban boards, and robust project tracking with multi-assignee support.
 
-![TaskFlow Hero](/app/public/images/flowspace.png)
+![TaskFlow Hero](/app/public/images/hero_new.png)
 
 ## ✨ Key Features
 
-- **Dynamic Kanban Boards**: Move tasks through stages with a seamless, interactive board.
-- **Multi-Assignee Support**: Assign multiple team members to a single task for collaborative work.
-- **Project Tracking**: Organise tasks into specific projects with dedicated filtering.
-- **Advanced Filters**: Real-time client-side filtering by Project, Priority, and Assignee.
-- **Team Management**: Manage team roles and members (Admin only).
-- **Minimalist UI**: A professional, distraction-free interface built with precision.
-- **Dark Mode Ready**: Fully responsive and optimized for both light and dark aesthetics.
+- **Dynamic Kanban Boards**: Seamlessly move tasks through 'To Do', 'In Progress', and 'Done' stages.
+- **Multi-Assignee Support**: Collaborative task management allowing multiple team members per task.
+- **Advanced Filtering**: Instant client-side filtering by Project, Priority, and Assignee.
+- **Project Tracking**: Dedicated views for different workstreams and projects.
+- **Team Management**: Role-based access for managing team members and workloads.
+- **Minimalist UX**: Fast, clean, and distraction-free interface.
 
 ## 🛠️ Technology Stack
 
