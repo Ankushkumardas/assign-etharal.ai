@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckSquare, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Mail, Lock, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
@@ -30,110 +30,102 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#111] flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-6 text-white font-sans">
+      <div className="w-full max-w-sm">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center justify-center w-12 h-12 border-2 border-black dark:border-white mb-6">
-              <CheckSquare className="w-6 h-6 text-black dark:text-white" />
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight text-black font-display dark:text-white">
-              TaskFlow
-            </h2>
-            <p className="mt-2 text-sm text-black/60 dark:text-white/60">
-              Sign in to manage your tasks.
-            </p>
+          <div className="mb-10 text-left">
+            <h2 className="text-2xl font-bold tracking-tight mb-2">Sign in</h2>
+            <p className="text-white/40 text-sm">Enter your credentials to access your workspace.</p>
           </div>
 
-          <div className="glass-card p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {error && (
-                <div className="p-3 text-sm text-red-600 border border-red-600 bg-red-50 dark:bg-red-900/10 dark:text-red-400">
-                  {error}
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="p-3 text-xs text-red-400 border border-red-400/20 bg-red-400/5">
+                {error}
+              </div>
+            )}
+            
+            <div className="space-y-2">
+              <label className="block text-sm font-medium text-white/90">
+                Email address
+              </label>
+              <div className="relative">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full bg-transparent border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-white/40 transition-colors placeholder:text-white/20"
+                  placeholder="admin@team.com"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="block text-sm font-medium text-white/90">
+                Password
+              </label>
+              <div className="relative">
+                <input
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full bg-transparent border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-white/40 transition-colors placeholder:text-white/20"
+                  placeholder="••••••••"
+                />
+                <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                  <Lock className="w-4 h-4 text-white/20" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <label className="flex items-center group cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="w-4 h-4 bg-transparent border border-white/20 rounded-none checked:bg-white checked:border-white appearance-none cursor-pointer transition-all"
+                />
+                <span className="ml-3 text-sm text-white/60 group-hover:text-white transition-colors">Remember me</span>
+              </label>
+              <button type="button" className="text-sm text-white/60 hover:text-white transition-colors">
+                Forgot password?
+              </button>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full bg-white text-black py-4 text-sm font-bold flex justify-center items-center group hover:bg-white/90 transition-colors"
+            >
+              {isLoading ? (
+                <div className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin" />
+              ) : (
+                <div className="flex items-center space-x-2">
+                  <span>Sign in</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               )}
-              
-              <div>
-                <label className="block text-sm font-medium text-black dark:text-white">
-                  Email address
-                </label>
-                <div className="mt-2 relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Mail className="h-5 w-5 text-black/40 dark:text-white/40" />
-                  </div>
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="input-field pl-10"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-black dark:text-white">
-                  Password
-                </label>
-                <div className="mt-2 relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Lock className="h-5 w-5 text-black/40 dark:text-white/40" />
-                  </div>
-                  <input
-                    type="password"
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="input-field pl-10"
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 border-black/20 text-black focus:ring-black dark:border-white/20 dark:bg-[#111]"
-                  />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-black/70 dark:text-white/70">
-                    Remember me
-                  </label>
-                </div>
-                <div className="text-sm">
-                  <a href="#" className="font-medium text-black hover:underline dark:text-white">
-                    Forgot password?
-                  </a>
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="btn-primary w-full flex justify-center items-center space-x-2 py-3"
-              >
-                {isLoading ? (
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white dark:border-black/30 dark:border-t-black rounded-full animate-spin" />
-                ) : (
-                  <>
-                    <span>Sign in</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
+            </button>
+          </form>
           
-          <p className="mt-6 text-center text-sm text-black/50 dark:text-white/50">
-            Demo Accounts:<br />
-            admin@team.com / password123<br />
-            john@team.com / password123
-          </p>
+          <div className="mt-12 pt-8 border-t border-white/5">
+            <p className="text-[11px] uppercase tracking-widest text-white/30 mb-4 text-center">Demo Credentials</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-3 bg-white/5 rounded-sm">
+                <p className="text-[10px] text-white/40 uppercase mb-1">Admin</p>
+                <p className="text-xs text-white/70">admin@team.com</p>
+              </div>
+              <div className="p-3 bg-white/5 rounded-sm">
+                <p className="text-[10px] text-white/40 uppercase mb-1">Manager</p>
+                <p className="text-xs text-white/70">john@team.com</p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

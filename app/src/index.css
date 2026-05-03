@@ -7,11 +7,22 @@
 }
 
 @layer base {
+  html {
+    font-size: 14px;
+  }
+
   body {
     @apply bg-white text-black antialiased selection:bg-black selection:text-white dark:bg-[#111] dark:text-white;
     font-family: 'Inter', sans-serif;
   }
   
+  h1 { @apply text-4xl font-bold; }
+  h2 { @apply text-3xl font-semibold; }
+  h3 { @apply text-2xl font-semibold; }
+  h4 { @apply text-xl font-medium; }
+  h5 { @apply text-lg font-medium; }
+  h6 { @apply text-base font-medium; }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.02em;
