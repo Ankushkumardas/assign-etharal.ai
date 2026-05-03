@@ -31,10 +31,7 @@ const Landing = () => {
             transition={{ duration: 0.6 }}
             className="flex-1 text-left"
           >
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-black/5 text-black/60 rounded-full text-[12px] font-bold mb-10 border border-black/5">
-              <div className="w-2 h-2 bg-black/40 rounded-full animate-pulse" />
-              <span>Version 1.0 — Now with Multi-Assignee support</span>
-            </div>
+
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
               The intelligent task manager <br /> for modern teams
