@@ -15,11 +15,7 @@ const Landing = () => {
           <span className="text-xl font-bold tracking-tight">TaskFlow</span>
         </div>
         
-        <div className="hidden md:flex items-center space-x-10">
-          <a href="#" className="text-sm font-medium text-black/50 hover:text-black transition-colors">Features</a>
-          <a href="#" className="text-sm font-medium text-black/50 hover:text-black transition-colors">How it works</a>
-          <a href="#" className="text-sm font-medium text-black/50 hover:text-black transition-colors">Pricing</a>
-        </div>
+
 
         <div className="flex items-center space-x-6">
           <Link to="/login" className="text-sm font-medium hover:text-black/60 transition-colors">Login</Link>
