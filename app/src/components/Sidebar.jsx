@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   const navItems = [
-    { name: 'Dashboard', icon: LayoutDashboard, path: '/' },
+    { name: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
     { name: 'Projects', icon: FolderGit2, path: '/projects' },
     { name: 'Tasks', icon: CheckSquare, path: '/tasks' },
   ];
