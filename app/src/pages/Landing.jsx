@@ -59,7 +59,7 @@ const Landing = () => {
             <div className="flex items-center space-x-4">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className={`w-10 h-10 rounded-full border-4 border-white overflow-hidden bg-gradient-to-br ${['from-blue-400 to-blue-600', 'from-purple-400 to-purple-600', 'from-orange-400 to-orange-600', 'from-green-400 to-green-600', 'from-red-400 to-red-600'][i-1]}`} />
+                  <div key={i} className={`w-10 h-10 rounded-full border-4 border-white overflow-hidden bg-linear-to-br ${['from-blue-400 to-blue-600', 'from-purple-400 to-purple-600', 'from-orange-400 to-orange-600', 'from-green-400 to-green-600', 'from-red-400 to-red-600'][i-1]}`} />
                 ))}
               </div>
               <p className="text-sm text-black/40 font-medium">
@@ -78,7 +78,7 @@ const Landing = () => {
               <img 
                 src="/images/flowspace.png" 
                 alt="App Interface" 
-                className="w-full rounded-[1.5rem] shadow-sm border border-black/5"
+                className="w-full rounded-3xl shadow-sm border border-black/5"
               />
               
               {/* Overlay Stat Card */}
