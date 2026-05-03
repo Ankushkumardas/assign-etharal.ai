@@ -18,9 +18,8 @@ const Landing = () => {
 
 
         <div className="flex items-center space-x-6">
-          <Link to="/login" className="text-sm font-medium hover:text-black/60 transition-colors">Login</Link>
-          <Link to="/login" className="bg-[#111] text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-black transition-all">
-            Sign Up
+          <Link to="/login" className="bg-[#111] text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-black transition-all">
+            Login
           </Link>
         </div>
       </nav>
@@ -75,7 +74,7 @@ const Landing = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 relative"
           >
-            <div className="relative bg-black/5 p-2 rounded-[2rem] shadow-2xl">
+            <div className="relative bg-black/5 p-2 rounded-4xl shadow-2xl">
               <img 
                 src="/images/flowspace.png" 
                 alt="App Interface" 
