@@ -1,1 +1,19 @@
 node_modules
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+
+# Test/debug scripts (keep out of repo)
+cleanup-tasks.js
+migrate-assignees.js
+test-tasks.js
