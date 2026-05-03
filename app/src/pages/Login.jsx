@@ -38,6 +38,12 @@ const Login = () => {
           transition={{ duration: 0.4 }}
         >
           <div className="mb-10 text-left">
+            <div className="flex items-center space-x-2 mb-8">
+              <div className="w-6 h-6 bg-white flex items-center justify-center rounded-sm">
+                <div className="w-3 h-3 bg-black" />
+              </div>
+              <span className="text-lg font-bold tracking-tight">TaskFlow</span>
+            </div>
             <h2 className="text-2xl font-bold tracking-tight mb-2">Sign in</h2>
             <p className="text-white/40 text-sm">Enter your credentials to access your workspace.</p>
           </div>

@@ -12,7 +12,7 @@ const Landing = () => {
           <div className="w-8 h-8 bg-black flex items-center justify-center rounded-lg">
             <Layout className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight">FlowSpace</span>
+          <span className="text-xl font-bold tracking-tight">TaskFlow</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-10">
@@ -44,11 +44,11 @@ const Landing = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
-              The project workspace your team actually needs
+              The only task manager <br /> your team actually needs
             </h1>
             
             <p className="text-lg text-black/50 leading-relaxed mb-10 max-w-lg">
-              Isolated workspaces, Kanban boards, real-time chat and role-based access — all in one platform built for growing organisations.
+              Streamline your workflow with real-time Kanban boards, multi-assignee tasks, and project tracking — all in one minimalist platform.
             </p>
             
             <div className="flex flex-wrap items-center gap-6 mb-12">
@@ -68,7 +68,7 @@ const Landing = () => {
                 ))}
               </div>
               <p className="text-sm text-black/40 font-medium">
-                <span className="text-black font-bold">2,400+</span> teams already running on FlowSpace
+                <span className="text-black font-bold">2,400+</span> teams already running on TaskFlow
               </p>
             </div>
           </motion.div>
@@ -120,9 +120,9 @@ const Landing = () => {
       <section className="pb-32 bg-gray-50/30">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { icon: Layout, title: "Smart Boards", desc: "Kanban boards that update in real-time as your team works.", color: "bg-blue-500" },
-            { icon: Users, title: "Collaborative", desc: "Multiple assignees, threaded comments and live presence.", color: "bg-purple-500" },
-            { icon: Zap, title: "Lightning Fast", desc: "Zero-latency updates and instantaneous search results.", color: "bg-orange-500" }
+            { icon: Layout, title: "Dynamic Boards", desc: "Interactive Kanban boards with real-time status updates and smooth transitions.", color: "bg-blue-500" },
+            { icon: Users, title: "Team Collaboration", desc: "Assign multiple members to a single task and manage team workloads seamlessly.", color: "bg-purple-500" },
+            { icon: Zap, title: "Smart Filters", desc: "Advanced client-side filtering by project, priority, and assignee for instant focus.", color: "bg-orange-500" }
           ].map((f, i) => (
             <div key={i} className="p-10 bg-white border border-black/5 rounded-3xl hover:shadow-xl hover:border-black/10 transition-all group">
               <div className={`w-12 h-12 ${f.color} rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-black/5`}>
@@ -142,7 +142,7 @@ const Landing = () => {
             <div className="w-6 h-6 bg-black flex items-center justify-center rounded-md">
               <Layout className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-bold tracking-tight text-black">FlowSpace</span>
+            <span className="text-lg font-bold tracking-tight text-black">TaskFlow</span>
           </div>
           <div className="flex space-x-10 text-sm font-medium text-black/50">
             <a href="#" className="hover:text-black">Features</a>
@@ -150,7 +150,7 @@ const Landing = () => {
             <a href="#" className="hover:text-black">Terms</a>
             <a href="#" className="hover:text-black">Contact</a>
           </div>
-          <p className="text-sm text-black/40">© 2026 FlowSpace. Built for excellence.</p>
+          <p className="text-sm text-black/40">© 2026 TaskFlow. Built for excellence.</p>
         </div>
       </footer>
     </div>
